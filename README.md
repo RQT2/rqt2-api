@@ -25,6 +25,30 @@ Este crate genera los stubs Rust (clientes y servidores) a partir de los `.proto
 - Rust (stable, 1.70+ recommended)
 - `protoc` (Protocol Buffers compiler)
 
+### Consumir rqt2-api
+
+Este repositorio puede ser consumido por otros módulos de dos maneras seguras: 
+
+### Dependencia Git en `Cargo.toml`
+
+```toml
+rqt2_api = { git = "https://github.com/RQT2/rqt2-api.git", rev = "<commit-sha>" }
+```
+
+### Git Submodule
+
+```bash
+# Añadir como submodule
+git submodule add https://github.com/RQT2/rqt2-api.git external/rqt2-api
+git submodule update --init --recursive
+```
+
+#### Modificación de `Cargo.toml`
+
+```toml
+rqt2_api = { path = "external/rqt2-api" }
+```
+
 ### Build / Generar stubs
 
 ```bash
