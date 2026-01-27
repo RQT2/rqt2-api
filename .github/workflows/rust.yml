@@ -1,4 +1,4 @@
-name: CI
+name: RUST
 
 on:
   push:
@@ -26,5 +26,4 @@ jobs:
 
       - name: Build rqt2-api
         run: |
-          cd rqt2-api
           cargo build --verbose
