@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package rqt2.api.v1;
+
+import "types.proto";
+
+message OpenWorkspaceRequest {
+  string path = 1;
+}
+
+message PackageInfo {
+  string name = 1;
+  string path = 2;
+  string build_type = 3;
+}
+
+message OpenWorkspaceResponse {
+  repeated PackageInfo packages = 1;
+  Status status = 2;
+}
+
+message ListPackagesRequest {
+  string workspace_path = 1;
+}
+
+message ListPackagesResponse {
+  repeated PackageInfo packages = 1;
+  Status status = 2;
+}
+
+message CreatePackageRequest {
+  string workspace_path = 1;
+  string name = 2;
+  string build_type = 3;
+  map<string, string> options = 4;
+}
+
+service WorkspaceService {
+  rpc OpenWorkspace(OpenWorkspaceRequest) returns (OpenWorkspaceResponse);
+  rpc ListPackages(ListPackagesRequest) returns (ListPackagesResponse);
+  rpc CreatePackage(CreatePackageRequest) returns (Status);
+}
