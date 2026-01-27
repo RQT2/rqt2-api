@@ -1,9 +1,9 @@
 # rqt2-api
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../rqt2-components/assets/branding/logo-main-light.svg">
-  <source media="(prefers-color-scheme: light)" srcset="../rqt2-components/assets/branding/logo-main-dark.svg">
-  <img alt="RQT2 Logo" src="../rqt2-components/assets/branding/logo-main-color.svg" width="50px">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/RQT2/rqt2-components/blob/main/assets/branding/logo-main-light.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/RQT2/rqt2-components/blob/main/assets/branding/logo-main-dark.svg">
+  <img alt="RQT2 Logo" src="https://github.com/RQT2/rqt2-components/blob/main/assets/branding/logo-main-color.svg" width="50px">
 </picture>
 
 API gRPC/protobuf que define los contratos entre la IDE (`rqt2-ide` / frontends PySide6) y los backends (`rqt2-rcl-utils`, agentes, daemons) del ecosistema RQT2.
