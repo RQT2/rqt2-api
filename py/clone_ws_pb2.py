@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='clone_ws.proto',
   package='rqt2.api.v1',
   syntax='proto3',
-  serialized_pb=_b('\n\x0e\x63lone_ws.proto\x12\x0brqt2.api.v1\"\x7f\n\x15\x43loneWorkspaceRequest\x12\x16\n\x0erepository_url\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65stination_dir\x18\x02 \x01(\t\x12\x16\n\x0eworkspace_name\x18\x03 \x01(\t\x12\x0e\n\x06\x62ranch\x18\x04 \x01(\t\x12\r\n\x05\x64\x65pth\x18\x05 \x01(\r\"`\n\x16\x43loneWorkspaceProgress\x12\x10\n\x08log_line\x18\x01 \x01(\t\x12\x10\n\x08progress\x18\x02 \x01(\x02\x12\x11\n\tcompleted\x18\x03 \x01(\x08\x12\x0f\n\x07success\x18\x04 \x01(\x08\x32t\n\x15\x43loneWorkspaceService\x12[\n\x0e\x43loneWorkspace\x12\".rqt2.api.v1.CloneWorkspaceRequest\x1a#.rqt2.api.v1.CloneWorkspaceProgress0\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x0e\x63lone_ws.proto\x12\x0brqt2.api.v1\"\x7f\n\x15\x43loneWorkspaceRequest\x12\x16\n\x0erepository_url\x18\x01 \x01(\t\x12\x17\n\x0f\x64\x65stination_dir\x18\x02 \x01(\t\x12\x16\n\x0eworkspace_name\x18\x03 \x01(\t\x12\x0e\n\x06\x62ranch\x18\x04 \x01(\t\x12\r\n\x05\x64\x65pth\x18\x05 \x01(\r\"`\n\x16\x43loneWorkspaceProgress\x12\x10\n\x08log_line\x18\x01 \x01(\t\x12\x10\n\x08progress\x18\x02 \x01(\x02\x12\x11\n\tcompleted\x18\x03 \x01(\x08\x12\x0f\n\x07success\x18\x04 \x01(\x08\"0\n\x1aSetCurrentTargetDirRequest\x12\x12\n\ntarget_dir\x18\x01 \x01(\t\":\n\x1bSetCurrentTargetDirResponse\x12\n\n\x02ok\x18\x01 \x01(\x08\x12\x0f\n\x07message\x18\x02 \x01(\t2\xde\x01\n\x15\x43loneWorkspaceService\x12[\n\x0e\x43loneWorkspace\x12\".rqt2.api.v1.CloneWorkspaceRequest\x1a#.rqt2.api.v1.CloneWorkspaceProgress0\x01\x12h\n\x13SetCurrentTargetDir\x12\'.rqt2.api.v1.SetCurrentTargetDirRequest\x1a(.rqt2.api.v1.SetCurrentTargetDirResponseb\x06proto3')
 )
 
 
@@ -135,8 +135,79 @@ _CLONEWORKSPACEPROGRESS = _descriptor.Descriptor(
   serialized_end=256,
 )
 
+
+_SETCURRENTTARGETDIRREQUEST = _descriptor.Descriptor(
+  name='SetCurrentTargetDirRequest',
+  full_name='rqt2.api.v1.SetCurrentTargetDirRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='target_dir', full_name='rqt2.api.v1.SetCurrentTargetDirRequest.target_dir', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=258,
+  serialized_end=306,
+)
+
+
+_SETCURRENTTARGETDIRRESPONSE = _descriptor.Descriptor(
+  name='SetCurrentTargetDirResponse',
+  full_name='rqt2.api.v1.SetCurrentTargetDirResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ok', full_name='rqt2.api.v1.SetCurrentTargetDirResponse.ok', index=0,
+      number=1, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='message', full_name='rqt2.api.v1.SetCurrentTargetDirResponse.message', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=308,
+  serialized_end=366,
+)
+
 DESCRIPTOR.message_types_by_name['CloneWorkspaceRequest'] = _CLONEWORKSPACEREQUEST
 DESCRIPTOR.message_types_by_name['CloneWorkspaceProgress'] = _CLONEWORKSPACEPROGRESS
+DESCRIPTOR.message_types_by_name['SetCurrentTargetDirRequest'] = _SETCURRENTTARGETDIRREQUEST
+DESCRIPTOR.message_types_by_name['SetCurrentTargetDirResponse'] = _SETCURRENTTARGETDIRRESPONSE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 CloneWorkspaceRequest = _reflection.GeneratedProtocolMessageType('CloneWorkspaceRequest', (_message.Message,), dict(
@@ -153,6 +224,20 @@ CloneWorkspaceProgress = _reflection.GeneratedProtocolMessageType('CloneWorkspac
   ))
 _sym_db.RegisterMessage(CloneWorkspaceProgress)
 
+SetCurrentTargetDirRequest = _reflection.GeneratedProtocolMessageType('SetCurrentTargetDirRequest', (_message.Message,), dict(
+  DESCRIPTOR = _SETCURRENTTARGETDIRREQUEST,
+  __module__ = 'clone_ws_pb2'
+  # @@protoc_insertion_point(class_scope:rqt2.api.v1.SetCurrentTargetDirRequest)
+  ))
+_sym_db.RegisterMessage(SetCurrentTargetDirRequest)
+
+SetCurrentTargetDirResponse = _reflection.GeneratedProtocolMessageType('SetCurrentTargetDirResponse', (_message.Message,), dict(
+  DESCRIPTOR = _SETCURRENTTARGETDIRRESPONSE,
+  __module__ = 'clone_ws_pb2'
+  # @@protoc_insertion_point(class_scope:rqt2.api.v1.SetCurrentTargetDirResponse)
+  ))
+_sym_db.RegisterMessage(SetCurrentTargetDirResponse)
+
 
 
 _CLONEWORKSPACESERVICE = _descriptor.ServiceDescriptor(
@@ -161,8 +246,8 @@ _CLONEWORKSPACESERVICE = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=258,
-  serialized_end=374,
+  serialized_start=369,
+  serialized_end=591,
   methods=[
   _descriptor.MethodDescriptor(
     name='CloneWorkspace',
@@ -171,6 +256,15 @@ _CLONEWORKSPACESERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CLONEWORKSPACEREQUEST,
     output_type=_CLONEWORKSPACEPROGRESS,
+    options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='SetCurrentTargetDir',
+    full_name='rqt2.api.v1.CloneWorkspaceService.SetCurrentTargetDir',
+    index=1,
+    containing_service=None,
+    input_type=_SETCURRENTTARGETDIRREQUEST,
+    output_type=_SETCURRENTTARGETDIRRESPONSE,
     options=None,
   ),
 ])

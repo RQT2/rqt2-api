@@ -19,6 +19,11 @@ class CloneWorkspaceServiceStub(object):
         request_serializer=clone__ws__pb2.CloneWorkspaceRequest.SerializeToString,
         response_deserializer=clone__ws__pb2.CloneWorkspaceProgress.FromString,
         )
+    self.SetCurrentTargetDir = channel.unary_unary(
+        '/rqt2.api.v1.CloneWorkspaceService/SetCurrentTargetDir',
+        request_serializer=clone__ws__pb2.SetCurrentTargetDirRequest.SerializeToString,
+        response_deserializer=clone__ws__pb2.SetCurrentTargetDirResponse.FromString,
+        )
 
 
 class CloneWorkspaceServiceServicer(object):
@@ -32,6 +37,13 @@ class CloneWorkspaceServiceServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def SetCurrentTargetDir(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_CloneWorkspaceServiceServicer_to_server(servicer, server):
   rpc_method_handlers = {
@@ -39,6 +51,11 @@ def add_CloneWorkspaceServiceServicer_to_server(servicer, server):
           servicer.CloneWorkspace,
           request_deserializer=clone__ws__pb2.CloneWorkspaceRequest.FromString,
           response_serializer=clone__ws__pb2.CloneWorkspaceProgress.SerializeToString,
+      ),
+      'SetCurrentTargetDir': grpc.unary_unary_rpc_method_handler(
+          servicer.SetCurrentTargetDir,
+          request_deserializer=clone__ws__pb2.SetCurrentTargetDirRequest.FromString,
+          response_serializer=clone__ws__pb2.SetCurrentTargetDirResponse.SerializeToString,
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
