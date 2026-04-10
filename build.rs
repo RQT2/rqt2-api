@@ -2,6 +2,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let proto_files = &[
         "proto/types.proto",
         "proto/build.proto",
+        "proto/clone_ws.proto",
         "proto/data_stream.proto",
         "proto/execution.proto",
         "proto/introspection.proto",
