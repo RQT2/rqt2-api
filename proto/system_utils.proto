@@ -48,6 +48,12 @@ message RemoteExecRequest {
 	repeated string args = 3;
 }
 
+message AvailableLibrariesResponse {
+	repeated string python_libraries = 1;
+	repeated string cpp_libraries = 2;
+	repeated string arduino_libraries = 3;
+}
+
 service SystemUtils {
 	rpc RestartDaemon(Empty) returns (Status);
 
@@ -57,5 +63,5 @@ service SystemUtils {
 
 	rpc ExecRemote(RemoteExecRequest) returns (stream CommandOutput);
 
-	//rpc StopSSHSession(SSHSession) returns (Status);
+	rpc GetAvailableLibraries(Empty) returns (AvailableLibrariesResponse);
 }

@@ -26,7 +26,7 @@ import types_pb2 as types__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12system_utils.proto\x12\x0crqtll.api.v1\x1a\x0btypes.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xba\x01\n\x0e\x43ommandRequest\x12\x12\n\nexecutable\x18\x01 \x01(\t\x12\x0c\n\x04\x61rgs\x18\x02 \x03(\t\x12\x32\n\x03\x65nv\x18\x03 \x03(\x0b\x32%.rqtll.api.v1.CommandRequest.EnvEntry\x12\x13\n\x0bworking_dir\x18\x04 \x01(\t\x12\x11\n\tsudowoodo\x18\x05 \x01(\x08\x1a*\n\x08\x45nvEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"v\n\rCommandOutput\x12-\n\ttimestamp\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12(\n\x06stream\x18\x02 \x01(\x0e\x32\x18.rqtll.api.v1.StreamType\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\"x\n\tSSHConfig\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\x12\x0c\n\x04user\x18\x03 \x01(\t\x12\x12\n\x08password\x18\x04 \x01(\tH\x00\x12\x12\n\x08key_path\x18\x05 \x01(\tH\x00\x12\x11\n\ttimeout_s\x18\x06 \x01(\x05\x42\x06\n\x04\x61uth\"b\n\nSSHSession\x12\x12\n\nsession_id\x18\x01 \x01(\t\x12\x0c\n\x04host\x18\x02 \x01(\t\x12\x0c\n\x04user\x18\x03 \x01(\t\x12$\n\x06status\x18\x04 \x01(\x0b\x32\x14.rqtll.api.v1.Status\"F\n\x11RemoteExecRequest\x12\x12\n\nsession_id\x18\x01 \x01(\t\x12\x0f\n\x07\x63ommand\x18\x02 \x01(\t\x12\x0c\n\x04\x61rgs\x18\x03 \x03(\t*$\n\nStreamType\x12\n\n\x06STDOUT\x10\x00\x12\n\n\x06STDERR\x10\x01\x32\xa8\x02\n\x0bSystemUtils\x12:\n\rRestartDaemon\x12\x13.rqtll.api.v1.Empty\x1a\x14.rqtll.api.v1.Status\x12I\n\nRunCommand\x12\x1c.rqtll.api.v1.CommandRequest\x1a\x1b.rqtll.api.v1.CommandOutput0\x01\x12\x44\n\x0fStartSSHSession\x12\x17.rqtll.api.v1.SSHConfig\x1a\x18.rqtll.api.v1.SSHSession\x12L\n\nExecRemote\x12\x1f.rqtll.api.v1.RemoteExecRequest\x1a\x1b.rqtll.api.v1.CommandOutput0\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12system_utils.proto\x12\x0crqtll.api.v1\x1a\x0btypes.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xba\x01\n\x0e\x43ommandRequest\x12\x12\n\nexecutable\x18\x01 \x01(\t\x12\x0c\n\x04\x61rgs\x18\x02 \x03(\t\x12\x32\n\x03\x65nv\x18\x03 \x03(\x0b\x32%.rqtll.api.v1.CommandRequest.EnvEntry\x12\x13\n\x0bworking_dir\x18\x04 \x01(\t\x12\x11\n\tsudowoodo\x18\x05 \x01(\x08\x1a*\n\x08\x45nvEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"v\n\rCommandOutput\x12-\n\ttimestamp\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12(\n\x06stream\x18\x02 \x01(\x0e\x32\x18.rqtll.api.v1.StreamType\x12\x0c\n\x04\x64\x61ta\x18\x03 \x01(\t\"x\n\tSSHConfig\x12\x0c\n\x04host\x18\x01 \x01(\t\x12\x0c\n\x04port\x18\x02 \x01(\x05\x12\x0c\n\x04user\x18\x03 \x01(\t\x12\x12\n\x08password\x18\x04 \x01(\tH\x00\x12\x12\n\x08key_path\x18\x05 \x01(\tH\x00\x12\x11\n\ttimeout_s\x18\x06 \x01(\x05\x42\x06\n\x04\x61uth\"b\n\nSSHSession\x12\x12\n\nsession_id\x18\x01 \x01(\t\x12\x0c\n\x04host\x18\x02 \x01(\t\x12\x0c\n\x04user\x18\x03 \x01(\t\x12$\n\x06status\x18\x04 \x01(\x0b\x32\x14.rqtll.api.v1.Status\"F\n\x11RemoteExecRequest\x12\x12\n\nsession_id\x18\x01 \x01(\t\x12\x0f\n\x07\x63ommand\x18\x02 \x01(\t\x12\x0c\n\x04\x61rgs\x18\x03 \x03(\t\"h\n\x1a\x41vailableLibrariesResponse\x12\x18\n\x10python_libraries\x18\x01 \x03(\t\x12\x15\n\rcpp_libraries\x18\x02 \x03(\t\x12\x19\n\x11\x61rduino_libraries\x18\x03 \x03(\t*$\n\nStreamType\x12\n\n\x06STDOUT\x10\x00\x12\n\n\x06STDERR\x10\x01\x32\x80\x03\n\x0bSystemUtils\x12:\n\rRestartDaemon\x12\x13.rqtll.api.v1.Empty\x1a\x14.rqtll.api.v1.Status\x12I\n\nRunCommand\x12\x1c.rqtll.api.v1.CommandRequest\x1a\x1b.rqtll.api.v1.CommandOutput0\x01\x12\x44\n\x0fStartSSHSession\x12\x17.rqtll.api.v1.SSHConfig\x1a\x18.rqtll.api.v1.SSHSession\x12L\n\nExecRemote\x12\x1f.rqtll.api.v1.RemoteExecRequest\x1a\x1b.rqtll.api.v1.CommandOutput0\x01\x12V\n\x15GetAvailableLibraries\x12\x13.rqtll.api.v1.Empty\x1a(.rqtll.api.v1.AvailableLibrariesResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -35,8 +35,8 @@ if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
   _globals['_COMMANDREQUEST_ENVENTRY']._loaded_options = None
   _globals['_COMMANDREQUEST_ENVENTRY']._serialized_options = b'8\001'
-  _globals['_STREAMTYPE']._serialized_start=685
-  _globals['_STREAMTYPE']._serialized_end=721
+  _globals['_STREAMTYPE']._serialized_start=791
+  _globals['_STREAMTYPE']._serialized_end=827
   _globals['_COMMANDREQUEST']._serialized_start=83
   _globals['_COMMANDREQUEST']._serialized_end=269
   _globals['_COMMANDREQUEST_ENVENTRY']._serialized_start=227
@@ -49,6 +49,8 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_SSHSESSION']._serialized_end=611
   _globals['_REMOTEEXECREQUEST']._serialized_start=613
   _globals['_REMOTEEXECREQUEST']._serialized_end=683
-  _globals['_SYSTEMUTILS']._serialized_start=724
-  _globals['_SYSTEMUTILS']._serialized_end=1020
+  _globals['_AVAILABLELIBRARIESRESPONSE']._serialized_start=685
+  _globals['_AVAILABLELIBRARIESRESPONSE']._serialized_end=789
+  _globals['_SYSTEMUTILS']._serialized_start=830
+  _globals['_SYSTEMUTILS']._serialized_end=1214
 # @@protoc_insertion_point(module_scope)
