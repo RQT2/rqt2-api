@@ -45,6 +45,16 @@ class IntrospectionServiceStub:
                 request_serializer=types__pb2.Empty.SerializeToString,
                 response_deserializer=introspection__pb2.ListTopicsResponse.FromString,
                 _registered_method=True)
+        self.GetGraph = channel.unary_unary(
+                '/rqtll.api.v1.IntrospectionService/GetGraph',
+                request_serializer=types__pb2.Empty.SerializeToString,
+                response_deserializer=introspection__pb2.ListGraphResponse.FromString,
+                _registered_method=True)
+        self.GetTopicMetrics = channel.unary_unary(
+                '/rqtll.api.v1.IntrospectionService/GetTopicMetrics',
+                request_serializer=introspection__pb2.TopicMetricsRequest.SerializeToString,
+                response_deserializer=introspection__pb2.TopicMetricsResponse.FromString,
+                _registered_method=True)
         self.WatchGraph = channel.unary_stream(
                 '/rqtll.api.v1.IntrospectionService/WatchGraph',
                 request_serializer=introspection__pb2.IntrospectionFilter.SerializeToString,
@@ -62,6 +72,18 @@ class IntrospectionServiceServicer:
         raise NotImplementedError('Method not implemented!')
 
     def ListTopics(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetGraph(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def GetTopicMetrics(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -85,6 +107,16 @@ def add_IntrospectionServiceServicer_to_server(servicer, server):
                     servicer.ListTopics,
                     request_deserializer=types__pb2.Empty.FromString,
                     response_serializer=introspection__pb2.ListTopicsResponse.SerializeToString,
+            ),
+            'GetGraph': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetGraph,
+                    request_deserializer=types__pb2.Empty.FromString,
+                    response_serializer=introspection__pb2.ListGraphResponse.SerializeToString,
+            ),
+            'GetTopicMetrics': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetTopicMetrics,
+                    request_deserializer=introspection__pb2.TopicMetricsRequest.FromString,
+                    response_serializer=introspection__pb2.TopicMetricsResponse.SerializeToString,
             ),
             'WatchGraph': grpc.unary_stream_rpc_method_handler(
                     servicer.WatchGraph,
@@ -146,6 +178,60 @@ class IntrospectionService:
             '/rqtll.api.v1.IntrospectionService/ListTopics',
             types__pb2.Empty.SerializeToString,
             introspection__pb2.ListTopicsResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def GetGraph(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/rqtll.api.v1.IntrospectionService/GetGraph',
+            types__pb2.Empty.SerializeToString,
+            introspection__pb2.ListGraphResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def GetTopicMetrics(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/rqtll.api.v1.IntrospectionService/GetTopicMetrics',
+            introspection__pb2.TopicMetricsRequest.SerializeToString,
+            introspection__pb2.TopicMetricsResponse.FromString,
             options,
             channel_credentials,
             insecure,

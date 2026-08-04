@@ -25,7 +25,7 @@ _sym_db = _symbol_database.Default()
 import types_pb2 as types__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13introspection.proto\x12\x0crqtll.api.v1\x1a\x0btypes.proto\"B\n\x13IntrospectionFilter\x12\x12\n\nnamespaces\x18\x01 \x03(\t\x12\x17\n\x0fnode_name_regex\x18\x02 \x01(\t\"\x80\x01\n\x11TopicInfoExtended\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cmessage_type\x18\x02 \x01(\t\x12\x17\n\x0fpublisher_count\x18\x03 \x01(\x05\x12\x18\n\x10subscriber_count\x18\x04 \x01(\x05\x12\x14\n\x0cqos_profiles\x18\x05 \x03(\t\"`\n\x11ListNodesResponse\x12%\n\x05nodes\x18\x01 \x03(\x0b\x32\x16.rqtll.api.v1.NodeInfo\x12$\n\x06status\x18\x02 \x01(\x0b\x32\x14.rqtll.api.v1.Status\"k\n\x12ListTopicsResponse\x12/\n\x06topics\x18\x01 \x03(\x0b\x32\x1f.rqtll.api.v1.TopicInfoExtended\x12$\n\x06status\x18\x02 \x01(\x0b\x32\x14.rqtll.api.v1.Status\"\x94\x01\n\tNodeEvent\x12/\n\x04type\x18\x01 \x01(\x0e\x32!.rqtll.api.v1.NodeEvent.EventType\x12$\n\x04node\x18\x02 \x01(\x0b\x32\x16.rqtll.api.v1.NodeInfo\"0\n\tEventType\x12\t\n\x05\x41\x44\x44\x45\x44\x10\x00\x12\x0b\n\x07REMOVED\x10\x01\x12\x0b\n\x07UPDATED\x10\x02\"\x98\x01\n\nTopicEvent\x12\x30\n\x04type\x18\x01 \x01(\x0e\x32\".rqtll.api.v1.TopicEvent.EventType\x12&\n\x05topic\x18\x02 \x01(\x0b\x32\x17.rqtll.api.v1.TopicInfo\"0\n\tEventType\x12\t\n\x05\x41\x44\x44\x45\x44\x10\x00\x12\x0b\n\x07REMOVED\x10\x01\x12\x0b\n\x07UPDATED\x10\x02\"y\n\nGraphEvent\x12/\n\x0cnode_changed\x18\x01 \x01(\x0b\x32\x17.rqtll.api.v1.NodeEventH\x00\x12\x31\n\rtopic_changed\x18\x02 \x01(\x0b\x32\x18.rqtll.api.v1.TopicEventH\x00\x42\x07\n\x05\x65vent2\xeb\x01\n\x14IntrospectionService\x12\x41\n\tListNodes\x12\x13.rqtll.api.v1.Empty\x1a\x1f.rqtll.api.v1.ListNodesResponse\x12\x43\n\nListTopics\x12\x13.rqtll.api.v1.Empty\x1a .rqtll.api.v1.ListTopicsResponse\x12K\n\nWatchGraph\x12!.rqtll.api.v1.IntrospectionFilter\x1a\x18.rqtll.api.v1.GraphEvent0\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13introspection.proto\x12\x0crqtll.api.v1\x1a\x0btypes.proto\"B\n\x13IntrospectionFilter\x12\x12\n\nnamespaces\x18\x01 \x03(\t\x12\x17\n\x0fnode_name_regex\x18\x02 \x01(\t\"\x80\x01\n\x11TopicInfoExtended\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x14\n\x0cmessage_type\x18\x02 \x01(\t\x12\x17\n\x0fpublisher_count\x18\x03 \x01(\x05\x12\x18\n\x10subscriber_count\x18\x04 \x01(\x05\x12\x14\n\x0cqos_profiles\x18\x05 \x03(\t\"e\n\x10NodeInfoExtended\x12$\n\x04node\x18\x01 \x01(\x0b\x32\x16.rqtll.api.v1.NodeInfo\x12\x14\n\x0cpublications\x18\x02 \x03(\t\x12\x15\n\rsubscriptions\x18\x03 \x03(\t\"h\n\x11ListGraphResponse\x12-\n\x05nodes\x18\x01 \x03(\x0b\x32\x1e.rqtll.api.v1.NodeInfoExtended\x12$\n\x06status\x18\x02 \x01(\x0b\x32\x14.rqtll.api.v1.Status\")\n\x13TopicMetricsRequest\x12\x12\n\ntopic_name\x18\x01 \x01(\t\"D\n\x14TopicMetricsResponse\x12\x14\n\x0cmessage_type\x18\x01 \x01(\t\x12\n\n\x02hz\x18\x02 \x01(\t\x12\n\n\x02\x62w\x18\x03 \x01(\t\"`\n\x11ListNodesResponse\x12%\n\x05nodes\x18\x01 \x03(\x0b\x32\x16.rqtll.api.v1.NodeInfo\x12$\n\x06status\x18\x02 \x01(\x0b\x32\x14.rqtll.api.v1.Status\"k\n\x12ListTopicsResponse\x12/\n\x06topics\x18\x01 \x03(\x0b\x32\x1f.rqtll.api.v1.TopicInfoExtended\x12$\n\x06status\x18\x02 \x01(\x0b\x32\x14.rqtll.api.v1.Status\"\x94\x01\n\tNodeEvent\x12/\n\x04type\x18\x01 \x01(\x0e\x32!.rqtll.api.v1.NodeEvent.EventType\x12$\n\x04node\x18\x02 \x01(\x0b\x32\x16.rqtll.api.v1.NodeInfo\"0\n\tEventType\x12\t\n\x05\x41\x44\x44\x45\x44\x10\x00\x12\x0b\n\x07REMOVED\x10\x01\x12\x0b\n\x07UPDATED\x10\x02\"\x98\x01\n\nTopicEvent\x12\x30\n\x04type\x18\x01 \x01(\x0e\x32\".rqtll.api.v1.TopicEvent.EventType\x12&\n\x05topic\x18\x02 \x01(\x0b\x32\x17.rqtll.api.v1.TopicInfo\"0\n\tEventType\x12\t\n\x05\x41\x44\x44\x45\x44\x10\x00\x12\x0b\n\x07REMOVED\x10\x01\x12\x0b\n\x07UPDATED\x10\x02\"y\n\nGraphEvent\x12/\n\x0cnode_changed\x18\x01 \x01(\x0b\x32\x17.rqtll.api.v1.NodeEventH\x00\x12\x31\n\rtopic_changed\x18\x02 \x01(\x0b\x32\x18.rqtll.api.v1.TopicEventH\x00\x42\x07\n\x05\x65vent2\x87\x03\n\x14IntrospectionService\x12\x41\n\tListNodes\x12\x13.rqtll.api.v1.Empty\x1a\x1f.rqtll.api.v1.ListNodesResponse\x12\x43\n\nListTopics\x12\x13.rqtll.api.v1.Empty\x1a .rqtll.api.v1.ListTopicsResponse\x12@\n\x08GetGraph\x12\x13.rqtll.api.v1.Empty\x1a\x1f.rqtll.api.v1.ListGraphResponse\x12X\n\x0fGetTopicMetrics\x12!.rqtll.api.v1.TopicMetricsRequest\x1a\".rqtll.api.v1.TopicMetricsResponse\x12K\n\nWatchGraph\x12!.rqtll.api.v1.IntrospectionFilter\x1a\x18.rqtll.api.v1.GraphEvent0\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -36,20 +36,28 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_INTROSPECTIONFILTER']._serialized_end=116
   _globals['_TOPICINFOEXTENDED']._serialized_start=119
   _globals['_TOPICINFOEXTENDED']._serialized_end=247
-  _globals['_LISTNODESRESPONSE']._serialized_start=249
-  _globals['_LISTNODESRESPONSE']._serialized_end=345
-  _globals['_LISTTOPICSRESPONSE']._serialized_start=347
-  _globals['_LISTTOPICSRESPONSE']._serialized_end=454
-  _globals['_NODEEVENT']._serialized_start=457
-  _globals['_NODEEVENT']._serialized_end=605
-  _globals['_NODEEVENT_EVENTTYPE']._serialized_start=557
-  _globals['_NODEEVENT_EVENTTYPE']._serialized_end=605
-  _globals['_TOPICEVENT']._serialized_start=608
-  _globals['_TOPICEVENT']._serialized_end=760
-  _globals['_TOPICEVENT_EVENTTYPE']._serialized_start=557
-  _globals['_TOPICEVENT_EVENTTYPE']._serialized_end=605
-  _globals['_GRAPHEVENT']._serialized_start=762
-  _globals['_GRAPHEVENT']._serialized_end=883
-  _globals['_INTROSPECTIONSERVICE']._serialized_start=886
-  _globals['_INTROSPECTIONSERVICE']._serialized_end=1121
+  _globals['_NODEINFOEXTENDED']._serialized_start=249
+  _globals['_NODEINFOEXTENDED']._serialized_end=350
+  _globals['_LISTGRAPHRESPONSE']._serialized_start=352
+  _globals['_LISTGRAPHRESPONSE']._serialized_end=456
+  _globals['_TOPICMETRICSREQUEST']._serialized_start=458
+  _globals['_TOPICMETRICSREQUEST']._serialized_end=499
+  _globals['_TOPICMETRICSRESPONSE']._serialized_start=501
+  _globals['_TOPICMETRICSRESPONSE']._serialized_end=569
+  _globals['_LISTNODESRESPONSE']._serialized_start=571
+  _globals['_LISTNODESRESPONSE']._serialized_end=667
+  _globals['_LISTTOPICSRESPONSE']._serialized_start=669
+  _globals['_LISTTOPICSRESPONSE']._serialized_end=776
+  _globals['_NODEEVENT']._serialized_start=779
+  _globals['_NODEEVENT']._serialized_end=927
+  _globals['_NODEEVENT_EVENTTYPE']._serialized_start=879
+  _globals['_NODEEVENT_EVENTTYPE']._serialized_end=927
+  _globals['_TOPICEVENT']._serialized_start=930
+  _globals['_TOPICEVENT']._serialized_end=1082
+  _globals['_TOPICEVENT_EVENTTYPE']._serialized_start=879
+  _globals['_TOPICEVENT_EVENTTYPE']._serialized_end=927
+  _globals['_GRAPHEVENT']._serialized_start=1084
+  _globals['_GRAPHEVENT']._serialized_end=1205
+  _globals['_INTROSPECTIONSERVICE']._serialized_start=1208
+  _globals['_INTROSPECTIONSERVICE']._serialized_end=1599
 # @@protoc_insertion_point(module_scope)

@@ -17,6 +17,27 @@ message TopicInfoExtended {
 	repeated string qos_profiles = 5;
 }
 
+message NodeInfoExtended {
+	NodeInfo node = 1;
+	repeated string publications = 2;
+	repeated string subscriptions = 3;
+}
+
+message ListGraphResponse {
+	repeated NodeInfoExtended nodes = 1;
+	Status status = 2;
+}
+
+message TopicMetricsRequest {
+	string topic_name = 1;
+}
+
+message TopicMetricsResponse {
+	string message_type = 1;
+	string hz = 2;
+	string bw = 3;
+}
+
 message ListNodesResponse {
 	repeated NodeInfo nodes = 1;
 	Status status = 2;
@@ -58,6 +79,8 @@ service IntrospectionService {
 	rpc ListNodes(Empty) returns (ListNodesResponse);
 
 	rpc ListTopics(Empty) returns (ListTopicsResponse);
+	rpc GetGraph(Empty) returns (ListGraphResponse);
+	rpc GetTopicMetrics(TopicMetricsRequest) returns (TopicMetricsResponse);
 
 	rpc WatchGraph(IntrospectionFilter) returns (stream GraphEvent);
 }
